@@ -1,0 +1,27 @@
+name: Bug Report
+description: If you have any problems/bugs with this project, report it here.
+labels: bug
+
+body:
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+          description: A clear and concise description of the problem
+      validations:
+          required: true
+    - type: textarea
+      id: reproduce
+      attributes:
+          label: How to reproduce
+          description: |
+              ⚠️  This is the most important part of the report ⚠️
+              Please take some time to describe how we can reproduce your issue.
+              Without a way to easily reproduce your issue, there is little chance we will be able to help you and work on a fix.
+      validations:
+          required: true
+    - type: textarea
+      id: additional
+      attributes:
+          label: Additional Context
+          description: "Any other context that may help us understand your issue better: screenshots, etc."
