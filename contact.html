@@ -73,8 +73,7 @@
                     >Submit Inquiry</button>
                 </form>
 
-                <div id="formFeedback" style="display: none;"></div>
-                <div id="loading" style="display: none;">Sending...</div>
+                <div id="success"></div>
             </div>
         </div>
 
@@ -102,7 +101,7 @@
                     if (!form.checkValidity()) {
                         event.stopPropagation()
                     } else {
-                        formCheckCaptcha();
+                        formCheckCaptcha(form);
                     }
                     form.classList.add('was-validated')
                 }, false)
@@ -140,7 +139,6 @@
             data: form_data,
             // dataType:"json",
             success: function (data) {
-                $('#queryResulDiv').html(data);
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success')
                     .append("<strong>Your message has been sent.</strong>");
